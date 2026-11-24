@@ -103,7 +103,7 @@ function charPanelHtml() {
       ${st.rows[i] ? '<span class="tick">✓</span>' : _T`<button class="btn small ${ok ? 'primary' : ''}" data-claim="row:${i}" ${ok ? '' : 'disabled'}>Coletar</button>`}</div>`;
   }).join('');
   return _T`<div class="char-panel">
-    <div class="cp-box"><h3>Privilégio <img class="act-ic" src="assets/icons/${p.act === 'lords' ? 'lords' : p.act}.png" alt=""> ${ACT_NAMES[p.act]}</h3>
+    <div class="cp-box"><h3>Privilégio <img class="act-ic" src="assets/icons/${p.act === 'lords' ? 'lords' : p.act}.webp" alt=""> ${ACT_NAMES[p.act]}</h3>
       <p>Quando ${ACT_NAMES[p.act]} for ativada no turno: ${privTxt}.</p>
       ${p.swap ? `<p class="small ${swapOn ? 'ok' : 'muted'}">${swapOn ? _T`✓ Ativo neste turno: a Corte já aceita a troca ao pagar.` : _T`Fica ativo nos turnos em que o lado escolhido ativar essa ação.`}</p>`
                : _T`<p class="small muted">Somado automaticamente no botão “Receber ganhos” da fase de ação.</p>`}</div>

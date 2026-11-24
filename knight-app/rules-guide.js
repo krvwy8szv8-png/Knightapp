@@ -2,7 +2,7 @@
 /* Guia de regras do modo solo, com exemplos. Os exemplos usam cartas reais do jogo (personagens, eventos e a carta Corte). */
 
 const GI = (k) => `<img class="gi" src="${(RES[k] || ACTIONS[k]).icon}" alt="${(RES[k] || ACTIONS[k]).name}">`;
-const GA = (k) => `<img class="gi a" src="assets/icons/${k}.png" alt="${ACTIONS[k] ? ACTIONS[k].name : k}">`;
+const GA = (k) => `<img class="gi a" src="assets/icons/${k}.webp" alt="${ACTIONS[k] ? ACTIONS[k].name : k}">`;
 const EX = (title, body) => _T`<div class="ex"><div class="ex-h">Exemplo · ${title}</div>${body}</div>`;
 const TIP = (body) => `<div class="tip">💡 ${body}</div>`;
 

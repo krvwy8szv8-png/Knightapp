@@ -293,6 +293,6 @@ function courtGainsHtml() {
   return _T`<div class="gains-sum"><span class="gs-h">Cada ativação rende hoje:</span>${acts.map((a) => {
     const g = activationGains(a); const has = Object.keys(g.out).length;
     const priv = a === pv.act && pv.plus ? ` <small>+priv.</small>` : '';
-    return `<span class="gs ${has ? 'on' : ''}"><img src="assets/icons/${a}.png" alt="">${has ? resList(g.out) : '<span class="muted">—</span>'}${priv}${g.src.length ? `<small> (+${g.src.join(', ')})</small>` : ''}</span>`;
+    return `<span class="gs ${has ? 'on' : ''}"><img src="assets/icons/${a}.webp" alt="">${has ? resList(g.out) : '<span class="muted">—</span>'}${priv}${g.src.length ? `<small> (+${g.src.join(', ')})</small>` : ''}</span>`;
   }).join('')}</div>`;
 }

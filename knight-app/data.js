@@ -2,24 +2,24 @@
 // g = Glória, n = Nobreza, v = valor, gold = Ouro
 
 const RES = {
-  g:    { name: _T`Glória`,  icon: 'assets/icons/glory.png' },
-  n:    { name: _T`Nobreza`, icon: 'assets/icons/nobility.png' },
-  v:    { name: _T`Valor`,   icon: 'assets/icons/valor.png' },
-  gold: { name: _T`Ouro`,    icon: 'assets/icons/gold.png' },
+  g:    { name: _T`Glória`,  icon: 'assets/icons/glory.webp' },
+  n:    { name: _T`Nobreza`, icon: 'assets/icons/nobility.webp' },
+  v:    { name: _T`Valor`,   icon: 'assets/icons/valor.webp' },
+  gold: { name: _T`Ouro`,    icon: 'assets/icons/gold.webp' },
 };
 
 const ACTIONS = {
-  king:      { name: _T`Rei`,        icon: 'assets/icons/king.png',
+  king:      { name: _T`Rei`,        icon: 'assets/icons/king.webp',
                hint: _T`Receba todos os recursos desbloqueados na trilha do Rei. Depois, receba as recompensas únicas da próxima ação do Rei no cartão de cenário (se tiver o nível exigido) e risque-a.` },
-  castle:    { name: _T`Castelo`,    icon: 'assets/icons/castle.png',
+  castle:    { name: _T`Castelo`,    icon: 'assets/icons/castle.webp',
                hint: _T`Receba os recursos desbloqueados do Castelo. Se tiver completado um andar e ligado a Vila e/ou o Estábulo, receba também os recursos desbloqueados deles.` },
-  church:    { name: _T`Igreja`,     icon: 'assets/icons/church.png',
+  church:    { name: _T`Igreja`,     icon: 'assets/icons/church.webp',
                hint: _T`Receba os recursos desbloqueados da Igreja e uma ação única desse tipo no cartão de cenário (escolha o lado, se tiver o nível). Se a trilha estiver completa e a corrente riscada, ativa também a ação vizinha.` },
-  nobles:    { name: _T`Nobres`,     icon: 'assets/icons/nobles.png',
+  nobles:    { name: _T`Nobres`,     icon: 'assets/icons/nobles.webp',
                hint: _T`Receba os recursos desbloqueados dos Nobres e uma ação única desse tipo no cartão de cenário (escolha o lado, se tiver o nível). Correntes completas ativam as ações vizinhas.` },
-  merchants: { name: _T`Mercadores`, icon: 'assets/icons/merchants.png',
+  merchants: { name: _T`Mercadores`, icon: 'assets/icons/merchants.webp',
                hint: _T`Receba os recursos desbloqueados dos Mercadores e uma ação única desse tipo no cartão de cenário (escolha o lado, se tiver o nível). Correntes completas ativam as ações vizinhas.` },
-  lords:     { name: _T`Senhores`,   icon: 'assets/icons/lords.png',
+  lords:     { name: _T`Senhores`,   icon: 'assets/icons/lords.webp',
                hint: _T`Considere cada senhor separadamente e receba todos os recursos desbloqueados de todos eles. Na maioria dos cenários, não ativa nada no cartão de cenário.` },
 };
 

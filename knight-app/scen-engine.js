@@ -167,7 +167,7 @@ function battlesHtml() {
       const can = !p && st !== 'locked' && (t === 'gold' ? S.res.gold >= n : payOptions(t).length);
       return `<button class="bc ${p ? 'paid' : can ? 'can' : ''}" data-bat="${i}:${ci}" ${p ? 'disabled' : ''}>${t === 'gold' ? n : ''}${icon}${p ? '<i>✕</i>' : ''}</button>`;
     }).join('');
-    const reqIcon = ['king', 'church', 'nobles', 'merchants', 'lords', 'castle'].includes(b.req) ? `<img class="act-ic" src="assets/icons/${b.req}.png" alt="">` : '';
+    const reqIcon = ['king', 'church', 'nobles', 'merchants', 'lords', 'castle'].includes(b.req) ? `<img class="act-ic" src="assets/icons/${b.req}.webp" alt="">` : '';
     return _T`<div class="bat ${st}"><div class="bat-h"><b>${i + 1}</b> ${reqIcon}<span class="req ${batReqOk(b) ? 'met' : ''}">${batReqLabel(b)} <small>(${batReqHave(b)})</small></span>
       <span class="bat-st">${{ won: _T`✓ vencida`, full: _T`dá para vencer agora`, ok: _T`pagável`, lack: _T`falta recurso`, locked: _T`bloqueada` }[st]}</span></div>
       <div class="bat-c">${costs}<span class="bat-r">→ −1 inimigo · 20 PV</span></div></div>`;
@@ -215,7 +215,7 @@ function kingHtml() {
     return `<div class="kc ${cls}"><div class="kc-h">${i === 0 ? _T`livre` : _T`Rei ${i}`}${i < k ? ' ✓' : i === k ? _T` · próxima` : ''}</div><div class="kc-b">${kingColText(c)}</div></div>`;
   }).join('');
   const nx = kingNext();
-  return _T`<div class="cp-box"><h3><img class="act-ic" src="assets/icons/king.png" alt=""> Ação do Rei <small class="muted">(você tem Rei ${lvl})</small></h3>
+  return _T`<div class="cp-box"><h3><img class="act-ic" src="assets/icons/king.webp" alt=""> Ação do Rei <small class="muted">(você tem Rei ${lvl})</small></h3>
     <div class="kcols">${cols}</div>
     <p class="muted small">${nx ? (nx.ok ? _T`Na próxima vez que um evento ativar o Rei, você recebe a coluna ${nx.k + 1} junto com os ganhos (botão “Receber ganhos”).` : _T`A coluna ${nx.k + 1} exige Rei nível ${nx.k}. Enquanto não tiver, ativar o Rei não dá nada aqui.`) : _T`Todas as colunas já foram usadas.`}</p></div>`;
 }

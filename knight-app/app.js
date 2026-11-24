@@ -358,10 +358,10 @@ function renderTable() {
     <div class="row-wrap"><div class="card-row">${row}</div></div>
     ${sel ? _T`<div class="select-bar"><span>${sel.info}</span><button class="btn small" data-cancel>Cancelar</button></div>` : _T`
     <div class="gold-actions">
-      <button class="btn small" data-sel="reveal"><img src="assets/icons/gold.png" alt="">1 · Revelar carta</button>
-      <button class="btn small" data-sel="swap"><img src="assets/icons/gold.png" alt="">2 · Trocar posições</button>
-      <button class="btn small" data-sel="replace"><img src="assets/icons/gold.png" alt="">2 · Substituir do baralho</button>
-      <button class="btn small" data-sel="adjacent"><img src="assets/icons/gold.png" alt="">6 · Ação da vizinha</button>
+      <button class="btn small" data-sel="reveal"><img src="assets/icons/gold.webp" alt="">1 · Revelar carta</button>
+      <button class="btn small" data-sel="swap"><img src="assets/icons/gold.webp" alt="">2 · Trocar posições</button>
+      <button class="btn small" data-sel="replace"><img src="assets/icons/gold.webp" alt="">2 · Substituir do baralho</button>
+      <button class="btn small" data-sel="adjacent"><img src="assets/icons/gold.webp" alt="">6 · Ação da vizinha</button>
     </div>`}
     ${logHtml()}`;
 

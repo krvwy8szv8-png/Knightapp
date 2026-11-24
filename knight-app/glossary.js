@@ -1,6 +1,6 @@
 'use strict';
 /* Glossário de ícones (aba Regras → Ícones). */
-const ACT_ICON = (k) => `assets/icons/act-${k}.png`;
+const ACT_ICON = (k) => `assets/icons/act-${k}.webp`;
 const GLOSSARY = [
   { t: _T`Recursos`, items: [
     ['svg:g', _T`Glória`, _T`Recurso amarelo. Paga custos com o mesmo símbolo.`],

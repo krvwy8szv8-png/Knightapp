@@ -8,7 +8,7 @@ function privText(p) {
   if (p.choice) return _T`ganha 1 ${p.choice.map((k) => RES[k].name).join(_T` ou `)} (à escolha)`;
   return _T`custos de ${p.swap.from.map((k) => RES[k].name).join('/')} podem ser pagos com ${p.swap.to.map((k) => RES[k].name).join('/')}`;
 }
-const actIc = (a) => `<img class="act-ic" src="assets/icons/${a}.png" alt="">`;
+const actIc = (a) => `<img class="act-ic" src="assets/icons/${a}.webp" alt="">`;
 const resIc = (k) => `<img class="ic" src="${RES[k].icon}" alt="">`;
 
 /* Totais que cada personagem ganha nas recompensas e limiares: servem para comparar. */

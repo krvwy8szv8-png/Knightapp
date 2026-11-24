@@ -88,7 +88,7 @@ function infPanelHtml() {
       const req = i === 0 ? _T`livre` : side === 'L' ? _T`nível ${row.lv[i - 1]}` : `⬡ ${row.hx[i - 1]}`;
       return `<span class="ic-cell ${used ? 'used' : isNext ? (nx.ok ? 'next ok' : 'next lock') : ''}">${req ? `<i class="ic-req">${req}</i>` : ''}${cellText(c, true)}</span>`;
     });
-    return _T`<div class="inf-row"><div class="ir-h"><img src="assets/icons/${row.act}.png" alt=""><b>${ACT_NAMES[row.act]}</b></div>
+    return _T`<div class="inf-row"><div class="ir-h"><img src="assets/icons/${row.act}.webp" alt=""><b>${ACT_NAMES[row.act]}</b></div>
       <div class="ir-line"><span class="ir-l">← nível</span>${cells('L').join('')}</div>
       <div class="ir-line"><span class="ir-l">→ Influência</span>${cells('R').join('')}</div></div>`;
   }).join('');
