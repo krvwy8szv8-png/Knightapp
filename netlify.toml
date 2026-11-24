@@ -1,0 +1,4 @@
+# O app fica na pasta knight-app/ (sem etapa de build).
+[build]
+  publish = "knight-app"
+  command = ""

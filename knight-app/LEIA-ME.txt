@@ -1,0 +1,26 @@
+KNIGHT · mesa digital (PWA)
+
+Publicar no Netlify:
+1. Descompacte o arquivo .zip. Vai aparecer a pasta "knight-app".
+2. Entre em https://app.netlify.com/drop (com sua conta Netlify).
+3. Arraste a pasta "knight-app" inteira para a área indicada.
+4. Pronto: o Netlify gera o endereço do site. Dá para trocar o nome em Site configuration > Change site name.
+
+Para atualizar depois: no painel do site, aba Deploys, arraste a pasta nova.
+
+Jogar offline:
+- Abra o site uma vez com internet e espere aparecer "Pronto para jogar offline" no rodapé da tela inicial.
+- No celular, use "Adicionar à tela de início" (iPhone: botão Compartilhar no Safari; Android: menu do Chrome > Instalar app).
+- Depois disso o jogo abre sem internet. As partidas ficam salvas no próprio aparelho.
+
+Atualizar com o pacote menor (só arquivos alterados):
+- Copie o conteúdo do pacote de atualização POR CIMA da pasta "knight-app" completa (substituindo os arquivos) e arraste a pasta inteira no Netlify.
+- O celular baixa sozinho apenas os arquivos novos. Para conferir a versão: Menu > Configurações.
+
+Recursos do app (versão final):
+- Mesa com prévia de cada lado da carta, fases do turno, consequências automáticas e objetivos.
+- Corte, Personagem e Cenário marcáveis, com destaque do que dá para pagar e ícones nítidos.
+- Mapa com áreas, contadores automáticos e Assistente (mover/atacar).
+- Partida guiada, guia de cada cenário, glossário de ícones, estatísticas com backup.
+- Computador: mapa ao lado da Mesa e atalhos de teclado (← → Enter, 1–5, M, Ctrl+Z).
+- Configurações: tamanho do texto, animações, avisos, detecção de vitória/derrota.
