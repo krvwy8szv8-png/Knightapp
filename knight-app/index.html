@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Knight · mesa digital</title>
+<meta name="theme-color" content="#1d1a17">
+<meta name="description" content="Versão digital do flip-and-write KNIGHT para jogar sem papel, inclusive offline.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- ===== Tela inicial ===== -->
+  <section id="setup" class="screen" hidden>
+    <header class="setup-head">
+      <h1>KNIGHT</h1>
+      <p class="sub">Mesa digital · modo solo</p>
+      <div class="lang-sw" role="group" aria-label="Language"><button data-lang="en">English</button><button data-lang="pt">Português</button></div>
+    </header>
+
+    <div id="resume-box" class="panel" hidden>
+      <div class="row-between">
+        <div><strong>Partida em andamento</strong><div id="resume-info" class="muted"></div></div>
+        <button class="btn primary" id="btn-resume">Continuar</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="row-between"><h2>1. Personagem</h2><button class="btn small" data-random="char">Sortear</button></div>
+      <div id="char-grid" class="pick-grid chars"></div>
+    </div>
+
+    <div class="panel">
+      <div class="row-between"><h2>2. Cenário</h2><button class="btn small" data-random="scen">Sortear</button></div>
+      <div id="scen-grid" class="pick-grid scens"></div>
+    </div>
+
+    <div class="panel">
+      <h2>3. Opções</h2>
+      <label class="check"><input type="checkbox" id="opt-adv"> Modo avançado <span class="muted">(preparação extra do cenário)</span></label>
+      <label class="field">Código da partida <span class="muted">(opcional)</span>
+        <input type="text" id="opt-seed" maxlength="12" placeholder="ex.: CASTELO" autocomplete="off">
+      </label>
+      <p class="muted small">Com o mesmo código, outra pessoa recebe as mesmas cartas de evento e o mesmo objetivo. Assim dá para jogar em modo simultâneo, cada um no seu aparelho.</p>
+    </div>
+
+    <button class="btn primary big" id="btn-start" disabled>Começar partida</button>
+    <button class="btn big" id="btn-tut">🎓 Partida guiada (primeira vez)</button>
+    <button class="btn small" id="btn-set">⚙ Configurações</button>
+    <p class="muted small center">Nunca jogou? A partida guiada ensina o 1º turno passo a passo.</p>
+
+    <div class="panel" id="history-box" hidden>
+      <h2>Partidas anteriores <button class="btn small" id="btn-stats">📊 Estatísticas</button></h2>
+      <ul id="history-list" class="history"></ul>
+    </div>
+
+    <p class="muted small center footnote">KNIGHT © Radosław Ignatów / Hammerdice. Ferramenta de uso pessoal para quem tem o jogo print &amp; play.<br><span id="offline-status"></span></p>
+  </section>
+
+  <!-- ===== Partida ===== -->
+  <section id="game" class="screen" hidden>
+    <header class="topbar">
+      <div class="tb-left">
+        <div class="tb-title" id="tb-title">Turno 1/12</div>
+        <div class="tb-sub" id="tb-sub"></div>
+      </div>
+      <div class="tb-right">
+        <button class="icon-btn" id="btn-undo" title="Desfazer" aria-label="Desfazer">↶</button>
+        <button class="icon-btn" id="btn-menu" title="Menu" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <div id="hud" class="hud"></div>
+
+    <nav class="tabs" id="tabs">
+      <button data-tab="table" class="active">Mesa</button>
+      <button data-tab="court">Corte</button>
+      <button data-tab="char">Personagem</button>
+      <button data-tab="scen">Cenário</button>
+      <button data-tab="rules">Regras</button>
+    </nav>
+
+    <main>
+      <div class="tab-page" id="tab-table"></div>
+      <aside id="side-map" class="side-map" hidden></aside>
+      <div class="tab-page sheet-page" id="tab-court" hidden></div>
+      <div class="tab-page sheet-page" id="tab-char" hidden></div>
+      <div class="tab-page" id="tab-scen" hidden></div>
+      <div class="tab-page" id="tab-rules" hidden></div>
+    </main>
+  </section>
+</div>
+
+<div id="tut" class="tut" hidden></div>
+<div id="modal" class="modal" hidden>
+  <div class="modal-card">
+    <button class="modal-x" id="modal-x" aria-label="Fechar">×</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div id="pop" class="pop" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<script src="i18n.js"></script>
+<script src="i18n-en.js"></script>
+<script src="data.js"></script>
+<script src="icons.js"></script>
+<script src="areas.js"></script>
+<script src="court.js"></script>
+<script src="court-engine.js"></script>
+<script src="char-engine.js"></script>
+<script src="scen-engine.js"></script>
+<script src="area-engine.js"></script>
+<script src="preview.js"></script>
+<script src="goal-engine.js"></script>
+<script src="scen2-engine.js"></script>
+<script src="cons-engine.js"></script>
+<script src="rules-guide.js"></script>
+<script src="scen-guide.js"></script>
+<script src="glossary.js"></script>
+<script src="settings.js"></script>
+<script src="pen.js"></script>
+<script src="scen-card.js"></script>
+<script src="tut.js"></script>
+<script src="stats.js"></script>
+<script src="pick-back.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
